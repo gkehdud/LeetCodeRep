@@ -102,6 +102,9 @@ namespace LeetCode
                         list = TreeNodeClass.TreeNode.InOrderTraversalIterative(treenode);
                         break;
                     case "PRR":
+                        Console.Write("testsedgsggggggggggggggsdgsdgsdgsdgsdgsdgt");
+                        Console.Write("testsedgsggggggggggggggsdgsdgsdgsdgsdgszcxzgt");
+                        Console.Write("testsedgsggggggggggggggsdgssdadsaddgsdgsdgsdgsdgt");
                         break;
                     case "PRI":
                         break;
