@@ -37,8 +37,12 @@ class Program
         TreeNodeClass.TreeNode treeNode = TreeNodeClass.TreeNode.TreeNodeInitialized();
         var IORlist = new List<int>();
         var IOIlist = new List<int>();
+        var IOMlist = new List<int>();
+        var PRRlist = new List<int>();
         TreeNodeClass.TreeNode.Print("IOR", "InOrderTraversalRecursive", treeNode, IORlist);
         TreeNodeClass.TreeNode.Print("IOI", "InOrderTraversalIterative", treeNode, IOIlist);
+        TreeNodeClass.TreeNode.Print("IOM", "InOrderTraversalMorris   ", treeNode, IOMlist);
+        TreeNodeClass.TreeNode.Print("PRR", "PreOrderTraversalRecursive", treeNode, PRRlist);
 
 
     }

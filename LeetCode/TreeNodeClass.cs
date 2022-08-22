@@ -15,6 +15,7 @@ namespace LeetCode
             public TreeNode left;
             public TreeNode right;
             private static IList<int> res= new List<int>();
+            private static IList<int> PRres = new List<int>();
             public TreeNode(int x)
             {
                 val = x;
@@ -92,6 +93,53 @@ namespace LeetCode
                 }
                 return list;
             }
+            public static IList<int> InOrderTraversalMorris(TreeNode root)
+            {
+                var list = new List<int>();
+                if (root is null) return list;
+
+
+                TreeNode curr, pre;
+                curr = root;
+                while (curr != null)
+                {
+                    if (curr.left == null)
+                    {
+                        list.Add(curr.val);
+                        curr = curr.right;
+                    }
+                    else
+                    {
+                        pre = curr.left;
+                        while (pre.right != null && pre.right != curr)
+                        {
+                            pre = pre.right;
+                        }
+                        if (pre.right == null)
+                        {
+                            pre.right = curr;
+                            curr = curr.left;
+                        }
+                        else
+                        {
+                            list.Add(curr.val);
+                            curr = curr.right;
+                        }
+                    }
+                }
+                return list;
+            }
+            public static IList<int> PreOrderTraversalRecursive(TreeNode root)
+            {
+                if (root is null) return PRres;
+
+                PRres.Add(root.val);
+                if (root.left != null) PreOrderTraversalRecursive(root.left);
+                if (root.right != null) PreOrderTraversalRecursive(root.right);
+
+                return PRres;
+
+            }
             public static void Print(String Type, String Name, TreeNode treenode, IList<int> list) {
                 switch (Type)
                 {
@@ -101,10 +149,11 @@ namespace LeetCode
                     case "IOI":
                         list = TreeNodeClass.TreeNode.InOrderTraversalIterative(treenode);
                         break;
+                    case "IOM":
+                        list = TreeNodeClass.TreeNode.InOrderTraversalMorris(treenode);
+                        break;
                     case "PRR":
-                        Console.Write("testsedgsggggggggggggggsdgsdgsdgsdgsdgsdgt");
-                        Console.Write("testsedgsggggggggggggggsdgsdgsdgsdgsdgszcxzgt");
-                        Console.Write("testsedgsggggggggggggggsdgssdadsaddgsdgsdgsdgsdgt");
+                        list = TreeNodeClass.TreeNode.PreOrderTraversalRecursive(treenode);
                         break;
                     case "PRI":
                         break;
