@@ -34,19 +34,36 @@ class Program
             mergedList = mergedList.next;
         }
         */
-        TreeNodeClass.TreeNode treeNode = TreeNodeClass.TreeNode.TreeNodeInitialized();
-        var IORlist = new List<int>();
-        var IOIlist = new List<int>();
-        var IOMlist = new List<int>();
-        var PRRlist = new List<int>();
-        TreeNodeClass.TreeNode.Print("IOR", "InOrderTraversalRecursive", treeNode, IORlist);
-        TreeNodeClass.TreeNode.Print("IOI", "InOrderTraversalIterative", treeNode, IOIlist);
-        TreeNodeClass.TreeNode.Print("IOM", "InOrderTraversalMorris   ", treeNode, IOMlist);
-        TreeNodeClass.TreeNode.Print("PRR", "PreOrderTraversalRecursive", treeNode, PRRlist);
 
+
+
+        //TreeNodeClass.TreeNode treeNode = TreeNodeClass.TreeNode.TreeNodeInitialized();
+        //var IORlist = new List<int>();
+        //var IOIlist = new List<int>();
+        //var IOMlist = new List<int>();
+        //var PRRlist = new List<int>();
+        //TreeNodeClass.TreeNode.Print("IOR", "InOrderTraversalRecursive", treeNode, IORlist);
+        //TreeNodeClass.TreeNode.Print("IOI", "InOrderTraversalIterative", treeNode, IOIlist);
+        //TreeNodeClass.TreeNode.Print("IOM", "InOrderTraversalMorris   ", treeNode, IOMlist);
+        //TreeNodeClass.TreeNode.Print("PRR", "PreOrderTraversalRecursive", treeNode, PRRlist);
+
+        ListNode.LinkedList linkedList = new ListNode.LinkedList();
+        Thread threadobj = new Thread(linkedList.Start);
+        threadobj.Start();
+        //linkedList.AddNodeToFront(1);
+        //linkedList.AddNodeToEnd(2);
+        //linkedList.AddNodeToEnd(3);
+        //linkedList.AddNodeToEnd(4);
+        ////linkedList.AddNodeToN(33, 3);
+        ////linkedList.AddNodeToN(77, 3);
+        ////linkedList.AddNodeToN(100, 10);
+        ////linkedList.DeleteNodeToFront();
+        ////linkedList.DeleteNodeToEnd();
+        //linkedList.DeleteNodeToN(2);
+        //linkedList.PrintList();
 
     }
-
-
     
+
+
 }
