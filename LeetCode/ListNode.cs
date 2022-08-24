@@ -219,7 +219,7 @@ namespace LeetCode
                     else
                     {
                         
-                        Console.Write("\n\n=========" + Type + "=========   Current ListNode : ");
+                        Console.Write("\n\n==========" + Type + "==========   Current ListNode : ");
                         PrintList();
                         string input;
                         Console.WriteLine();
