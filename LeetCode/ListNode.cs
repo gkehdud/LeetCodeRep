@@ -278,6 +278,7 @@ namespace LeetCode
             }
             public void PrintList()
             {
+                Console.Write("TESTSETEST");
                 int n = 0;
                 LinkedListNode runner = head;
                 Console.Write("[");
